@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cerita Kami & Misi Cimande | Stik Singkong "Crunch Your Day!"</title>
+  <meta name="description" content="Cerita di balik Stik Singkong Cimande Bogor: Pemberdayaan petani lokal, pembinaan ibu rumah tangga, dan prinsip zero waste untuk kelestarian lingkungan.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hb: {
+              red: '#D32323',
+              redDark: '#B91C1C',
+              yellow: '#FDB813',
+              yellowDark: '#D97706',
+              cream: '#FFFDF7',
+              charcoal: '#1E1E1E',
+              wa: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#FFFDF7] text-gray-800 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- TOP INFO BAR -->
+  <div class="bg-gradient-to-r from-hb-red via-red-600 to-hb-redDark text-white text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
+        <span><strong>Misi Sosial Desa Cimande:</strong> Setiap kunyahan renyah Anda memberdayakan petani & warga lokal Bogor!</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] font-semibold text-yellow-200">
+        <span><i class="fa-solid fa-seedling mr-1"></i> Prinsip Zero Waste Ramah Lingkungan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-hb-red to-red-700 flex items-center justify-center text-white shadow-md shadow-red-500/30 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-bowl-food text-2xl text-yellow-300"></i>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-gray-900 leading-none">
+              STIK<span class="text-hb-red">SINGKONG</span>
+            </div>
+            <div class="text-[10px] font-extrabold uppercase tracking-widest text-hb-yellowDark mt-0.5">
+              Crunch Your Day! • Asli Bogor
+            </div>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm text-gray-700">
+          <a href="index.html" class="nav-link hover:text-hb-red py-2">Beranda</a>
+          <a href="menu.html" class="nav-link hover:text-hb-red py-2">Menu & Varian</a>
+          <a href="promo.html" class="nav-link hover:text-hb-red py-2">Promo Spesial</a>
+          <a href="tentang-kami.html" class="nav-link active hover:text-hb-red py-2">Cerita Cimande</a>
+          <a href="cara-pesan.html" class="nav-link hover:text-hb-red py-2">Cara Pesan & FAQ</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="checkout.html" class="relative inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-amber-50 text-amber-900 hover:bg-amber-100 border border-amber-200 transition" title="Lihat Keranjang Pesanan">
+            <i class="fa-solid fa-basket-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1.5 -right-1.5 bg-hb-red text-white text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+          </a>
+          <a href="checkout.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-hb-red to-red-600 hover:from-red-600 hover:to-red-700 text-white font-extrabold px-5 py-2.5 rounded-2xl text-sm shadow-md shadow-red-500/25 transition transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Keranjang & Checkout</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="checkout.html" class="relative p-2.5 rounded-xl bg-amber-50 text-gray-800">
+            <i class="fa-solid fa-basket-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-hb-red text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-gray-700 hover:text-hb-red hover:bg-gray-100 focus:outline-none" aria-label="Buka Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-6 pt-3 pb-6 shadow-2xl">
+      <div class="flex flex-col space-y-3 font-semibold text-gray-700">
+        <a href="index.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Beranda</a>
+        <a href="menu.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Menu & Varian</a>
+        <a href="promo.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Promo Spesial</a>
+        <a href="tentang-kami.html" class="py-2.5 border-b border-gray-100 text-hb-red font-bold">Cerita Cimande</a>
+        <a href="cara-pesan.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Cara Pesan & FAQ</a>
+        <a href="checkout.html" class="mt-2 text-center bg-hb-red text-white font-bold py-3 rounded-2xl shadow-md">
+          <i class="fa-solid fa-cart-shopping mr-1"></i> Keranjang & Checkout
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO STORY -->
+  <section class="pt-12 pb-16 bg-gradient-to-b from-amber-50/50 via-white to-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <nav class="flex items-center gap-2 text-xs text-gray-400 font-medium mb-6">
+        <a href="index.html" class="hover:text-hb-red">Beranda</a>
+        <span>/</span>
+        <span class="text-gray-900 font-bold">Cerita Kami</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7">
+          <span class="text-emerald-700 font-extrabold text-xs uppercase tracking-widest bg-emerald-50 border border-emerald-200 px-4 py-1.5 rounded-full inline-block mb-3">
+            Noble Purpose & Cerita Desa
+          </span>
+          <h1 class="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+            Lebih Dari Sekadar Camilan: Dari Ladang Cimande untuk Senyum Sesama
+          </h1>
+          <div class="mt-6 space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Setiap kemasan <strong>Stik Singkong "Crunch Your Day!"</strong> berawal dari hamparan tanah subur di <strong>Desa Cimande, Kecamatan Caringin, Kabupaten Bogor</strong>. Kami meyakini bahwa hasil bumi singkong lokal menyimpan kelezatan luar biasa jika dirawat dengan penuh ketulusan dan diolah dengan standar kebersihan modern.
+            </p>
+            <p>
+              Usaha ini lahir bukan sekadar memanjakan lidah para pecinta camilan renyah, melainkan membawa misi pemberdayaan nyata: bermitra langsung dengan <strong>petani singkong Cimande</strong> agar hasil panennya dihargai secara adil, serta membuka lapangan penghasilan tambahan yang mandiri bagi <strong>ibu-ibu rumah tangga</strong> di desa kami.
+            </p>
+            <blockquote class="border-l-4 border-emerald-500 pl-4 py-1 italic text-gray-800 font-semibold bg-emerald-50/50 rounded-r-xl">
+              "Kami percaya makanan enak harus membawa kebaikan bagi petani yang menanam, warga yang memproduksi, dan lingkungan yang kita tinggali."
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-xl space-y-5">
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100">
+              <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-sm">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-gray-900 text-sm sm:text-base">Pemberdayaan Petani & Warga</h3>
+                <p class="text-gray-600 text-xs mt-1 leading-relaxed">
+                  Bermitra langsung dengan petani singkong lokal tanpa perantara dan membina ibu rumah tangga untuk proses produksi.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-amber-50/60 border border-amber-100">
+              <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-sm">
+                <i class="fa-solid fa-recycle"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-gray-900 text-sm sm:text-base">Prinsip Zero Waste</h3>
+                <p class="text-gray-600 text-xs mt-1 leading-relaxed">
+                  Sisa kulit singkong tidak dibuang mengotori lingkungan, melainkan diolah menjadi pakan ternak warga dan pupuk kompos alami.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-red-50/60 border border-red-100">
+              <div class="w-12 h-12 rounded-xl bg-hb-red text-white flex items-center justify-center text-xl flex-shrink-0 shadow-sm">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-gray-900 text-sm sm:text-base">Asli Dari Desa Cimande Bogor</h3>
+                <p class="text-gray-600 text-xs mt-1 leading-relaxed">
+                  Tanah pegunungan yang subur menghasilkan singkong mentega berkualitas tinggi dengan tekstur lembut dan manis alami.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4 TAHAP PROSES HIGIENIS -->
+  <section class="py-16 sm:py-20 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-hb-red font-extrabold text-xs uppercase tracking-widest bg-red-50 border border-red-200 px-4 py-1 rounded-full">
+          Standard Pengolahan
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2">4 Rahasia di Balik Kerenyahannya</h2>
+        <p class="text-gray-600 text-sm sm:text-base mt-2">Dibuat penuh ketelitian dengan alur higienis untuk menghasilkan stik singkong yang renyah dan empuk.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-amber-50/40 p-7 rounded-3xl border border-amber-200/70 text-center relative hover:shadow-md transition">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white font-black text-xl flex items-center justify-center mx-auto mb-5 shadow-md">
+            1
+          </div>
+          <h3 class="font-extrabold text-lg text-gray-900 mb-2">Pilih & Kukus / Rebus</h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Singkong mentega pilihan dikupas, dicuci higienis dengan air mengalir, lalu dikukus hingga matang sempurna dan bertekstur empuk.
+          </p>
+        </div>
+
+        <div class="bg-amber-50/40 p-7 rounded-3xl border border-amber-200/70 text-center relative hover:shadow-md transition">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white font-black text-xl flex items-center justify-center mx-auto mb-5 shadow-md">
+            2
+          </div>
+          <h3 class="font-extrabold text-lg text-gray-900 mb-2">Haluskan & Bumbui</h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Dihaluskan dan dipadukan dengan bumbu rempah dasar rahasia alami agar gurihnya meresap sampai ke serat terdalam adonan.
+          </p>
+        </div>
+
+        <div class="bg-amber-50/40 p-7 rounded-3xl border border-amber-200/70 text-center relative hover:shadow-md transition">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white font-black text-xl flex items-center justify-center mx-auto mb-5 shadow-md">
+            3
+          </div>
+          <h3 class="font-extrabold text-lg text-gray-900 mb-2">Bentuk Stik Seragam</h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Adonan dicetak dan dipotong memanjang berukuran presisi agar tingkat kematangan dan kerenyahan merata saat digoreng.
+          </p>
+        </div>
+
+        <div class="bg-amber-50/40 p-7 rounded-3xl border border-amber-200/70 text-center relative hover:shadow-md transition">
+          <div class="w-14 h-14 rounded-2xl bg-hb-red text-white font-black text-xl flex items-center justify-center mx-auto mb-5 shadow-md">
+            4
+          </div>
+          <h3 class="font-extrabold text-lg text-gray-900 mb-2">Goreng PO & Spinner</h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Digoreng dadakan saat ada pesanan masuk, ditiriskan minyaknya menggunakan mesin spinner agar tidak tengik, lalu disegel rapat.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CTA banner inside about -->
+      <div class="mt-16 bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="text-xs uppercase font-extrabold text-yellow-400 tracking-wider">Mari Jadi Bagian Dari Kebaikan</span>
+          <h3 class="text-2xl sm:text-3xl font-black mt-1">Ingin Mencicipi Kerenyahannya Sekarang?</h3>
+          <p class="text-gray-400 text-sm mt-1">Pesan fresh dari wajan hari ini juga lewat WhatsApp!</p>
+        </div>
+        <a href="menu.html" class="bg-hb-red hover:bg-red-700 text-white font-extrabold px-8 py-4 rounded-2xl text-sm transition shadow-lg flex-shrink-0">
+          Lihat Varian Menu
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white pt-16 pb-12 border-t-4 border-hb-red">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-hb-red flex items-center justify-center text-white">
+              <i class="fa-solid fa-bowl-food text-lg text-yellow-300"></i>
+            </div>
+            <span class="text-2xl font-black">STIK SINGKONG</span>
+          </div>
+          <p class="text-xs font-black text-yellow-400 uppercase tracking-widest mb-3">Crunch Your Day! • Produk Lokal Cimande Bogor</p>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Camilan stik singkong renyah & gurih dari Desa Cimande, Kecamatan Caringin, Bogor. Dibuat dengan cinta, menjaga bumi melalui daur ulang kulit singkong, dan memberdayakan petani lokal.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-gray-200 uppercase tracking-wider mb-4">Halaman Menu</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-yellow-400 transition">Beranda</a></li>
+            <li><a href="menu.html" class="hover:text-yellow-400 transition">Daftar Menu & Varian</a></li>
+            <li><a href="promo.html" class="hover:text-yellow-400 transition">Promo Spesial</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-yellow-400 transition">Cerita & Misi Cimande</a></li>
+            <li><a href="cara-pesan.html" class="hover:text-yellow-400 transition">Cara Pesan & FAQ</a></li>
+            <li><a href="checkout.html" class="hover:text-yellow-400 transition">Keranjang Belanja</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-gray-200 uppercase tracking-wider mb-4">Pusat Layanan</h4>
+          <p class="text-xs sm:text-sm text-gray-400 mb-2">
+            <i class="fa-solid fa-location-dot text-hb-red mr-2"></i> Desa Cimande, Kec. Caringin, Kab. Bogor, Jawa Barat
+          </p>
+          <p class="text-xs sm:text-sm text-gray-400 mb-5">
+            <i class="fa-solid fa-clock text-emerald-400 mr-2"></i> 08.00 - 21.00 WIB
+          </p>
+          
+          <button onclick="openCustomerServiceChat()" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-4 py-2.5 rounded-xl text-xs transition">
+            <i class="fa-brands fa-whatsapp text-base"></i> Chat Admin WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>&copy; 2026 Stik Singkong "Crunch Your Day!". Hak cipta dilindungi undang-undang.</p>
+        <p class="text-gray-400">Bangga dengan produk singkong lokal Indonesia 🇮🇩</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WA Button -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <button onclick="openCustomerServiceChat()" class="float-wa-btn w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-3xl shadow-2xl flex items-center justify-center transform hover:scale-110 active:scale-95 transition-all shadow-emerald-500/40" aria-label="Chat WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </button>
+  </div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

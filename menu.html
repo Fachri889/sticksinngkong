@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Menu & Varian Rasa | Stik Singkong "Crunch Your Day!"</title>
+  <meta name="description" content="Pilihan lengkap menu Stik Singkong renyah kualitas premium: Original Gurih, Balado Manis Gurih, Pedas Nampol, dan Paket Kombo Hemat.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hb: {
+              red: '#D32323',
+              redDark: '#B91C1C',
+              yellow: '#FDB813',
+              yellowDark: '#D97706',
+              cream: '#FFFDF7',
+              charcoal: '#1E1E1E',
+              wa: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#FFFDF7] text-gray-800 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ==============================================================
+       1. TOP INFO BAR
+       ============================================================== -->
+  <div class="bg-gradient-to-r from-hb-red via-red-600 to-hb-redDark text-white text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
+        <span><strong>Katalog Menu Resmi:</strong> Klik tombol "+ Keranjang" atau langsung pesan via WhatsApp!</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] font-semibold text-yellow-200">
+        <span><i class="fa-solid fa-gift mr-1"></i> Beli 10 Pouch Gratis 1 Pouch Otomatis!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+       2. MAIN NAVBAR
+       ============================================================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo Emblem -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-hb-red to-red-700 flex items-center justify-center text-white shadow-md shadow-red-500/30 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-bowl-food text-2xl text-yellow-300"></i>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-gray-900 leading-none">
+              STIK<span class="text-hb-red">SINGKONG</span>
+            </div>
+            <div class="text-[10px] font-extrabold uppercase tracking-widest text-hb-yellowDark mt-0.5">
+              Crunch Your Day! • Asli Bogor
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm text-gray-700">
+          <a href="index.html" class="nav-link hover:text-hb-red py-2">Beranda</a>
+          <a href="menu.html" class="nav-link active hover:text-hb-red py-2">Menu & Varian</a>
+          <a href="promo.html" class="nav-link hover:text-hb-red py-2">Promo Spesial</a>
+          <a href="tentang-kami.html" class="nav-link hover:text-hb-red py-2">Cerita Cimande</a>
+          <a href="cara-pesan.html" class="nav-link hover:text-hb-red py-2">Cara Pesan & FAQ</a>
+        </nav>
+
+        <!-- CTA Action Buttons & Cart -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="checkout.html" class="relative inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-amber-50 text-amber-900 hover:bg-amber-100 border border-amber-200 transition" title="Lihat Keranjang Pesanan">
+            <i class="fa-solid fa-basket-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1.5 -right-1.5 bg-hb-red text-white text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+          </a>
+          <a href="checkout.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-hb-red to-red-600 hover:from-red-600 hover:to-red-700 text-white font-extrabold px-5 py-2.5 rounded-2xl text-sm shadow-md shadow-red-500/25 transition transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Keranjang & Checkout</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="checkout.html" class="relative p-2.5 rounded-xl bg-amber-50 text-gray-800">
+            <i class="fa-solid fa-basket-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-hb-red text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-gray-700 hover:text-hb-red hover:bg-gray-100 focus:outline-none" aria-label="Buka Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-6 pt-3 pb-6 shadow-2xl">
+      <div class="flex flex-col space-y-3 font-semibold text-gray-700">
+        <a href="index.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Beranda</a>
+        <a href="menu.html" class="py-2.5 border-b border-gray-100 text-hb-red font-bold">Menu & Varian</a>
+        <a href="promo.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Promo Spesial</a>
+        <a href="tentang-kami.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Cerita Cimande</a>
+        <a href="cara-pesan.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Cara Pesan & FAQ</a>
+        <a href="checkout.html" class="mt-2 text-center bg-hb-red text-white font-bold py-3 rounded-2xl shadow-md">
+          <i class="fa-solid fa-cart-shopping mr-1"></i> Keranjang & Checkout
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================================================
+       3. MENU HEADER & CATEGORY TABS (HokBen Bento Navigation)
+       ============================================================== -->
+  <section class="pt-10 pb-8 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-gray-400 font-medium mb-4">
+        <a href="index.html" class="hover:text-hb-red">Beranda</a>
+        <span>/</span>
+        <span class="text-gray-900 font-bold">Katalog Menu</span>
+      </nav>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-hb-red font-extrabold text-xs uppercase tracking-widest bg-red-50 border border-red-200 px-3.5 py-1 rounded-full">
+            Daftar Menu Resmi
+          </span>
+          <h1 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2">Varian Rasa & Paket Kombo</h1>
+          <p class="text-gray-600 text-sm sm:text-base mt-1">Pilih varian favoritmu, tambahkan ke keranjang, dan pesan langsung via WhatsApp.</p>
+        </div>
+
+        <div class="text-xs bg-amber-50 text-amber-900 border border-amber-200 px-4 py-2.5 rounded-2xl font-bold flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-amber-600"></i>
+          <span>Beli 10 Pouch otomatis dapat <strong>1 Pouch Gratis</strong>!</span>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="mt-8 flex flex-wrap items-center gap-2.5">
+        <button data-category="all" class="category-tab active px-5 py-2.5 rounded-2xl border border-gray-200 font-extrabold text-xs sm:text-sm text-gray-700 hover:border-hb-red transition flex items-center gap-2">
+          <i class="fa-solid fa-border-all"></i>
+          <span>Semua Menu</span>
+        </button>
+        <button data-category="ala-carte" class="category-tab px-5 py-2.5 rounded-2xl border border-gray-200 font-extrabold text-xs sm:text-sm text-gray-700 hover:border-hb-red transition flex items-center gap-2">
+          <i class="fa-solid fa-cookie-bite"></i>
+          <span>Varian Ala Carte (100g)</span>
+        </button>
+        <button data-category="paket-hemat" class="category-tab px-5 py-2.5 rounded-2xl border border-gray-200 font-extrabold text-xs sm:text-sm text-gray-700 hover:border-hb-red transition flex items-center gap-2">
+          <i class="fa-solid fa-box-open"></i>
+          <span>Paket Kombo Hemat</span>
+        </button>
+        <button data-category="reseller" class="category-tab px-5 py-2.5 rounded-2xl border border-gray-200 font-extrabold text-xs sm:text-sm text-gray-700 hover:border-hb-red transition flex items-center gap-2">
+          <i class="fa-solid fa-handshake"></i>
+          <span>Kemitraan Reseller</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       4. PRODUCTS GRID CONTAINER (Rendered by menu-page.js)
+       ============================================================== -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Grid loaded by JavaScript -->
+      <div id="menu-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Loading Placeholder -->
+        <div class="col-span-full text-center py-20 text-gray-400">
+          <i class="fa-solid fa-spinner fa-spin text-4xl text-hb-red mb-3"></i>
+          <p class="font-bold text-sm">Memuat daftar menu...</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       5. STICKY BOTTOM CHECKOUT PREVIEW BAR
+       ============================================================== -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 p-4 shadow-2xl">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-red-100 text-hb-red flex items-center justify-center font-black">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div>
+          <div class="text-xs text-gray-500 font-medium">Pesanan Anda:</div>
+          <div class="text-sm font-extrabold text-gray-900">
+            <span class="cart-count-badge text-hb-red">0</span> Item di Keranjang
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="checkout.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-hb-red to-red-600 hover:from-red-600 hover:to-red-700 text-white font-black px-6 py-3 rounded-2xl text-xs sm:text-sm shadow-md shadow-red-500/30 transition transform hover:-translate-y-0.5">
+          <span>Lanjut ke Checkout WhatsApp</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Space for sticky bar -->
+  <div class="h-20"></div>
+
+  <!-- ==============================================================
+       6. FOOTER
+       ============================================================== -->
+  <footer class="bg-gray-900 text-white pt-16 pb-12 border-t-4 border-hb-red">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-hb-red flex items-center justify-center text-white">
+              <i class="fa-solid fa-bowl-food text-lg text-yellow-300"></i>
+            </div>
+            <span class="text-2xl font-black">STIK SINGKONG</span>
+          </div>
+          <p class="text-xs font-black text-yellow-400 uppercase tracking-widest mb-3">Crunch Your Day! • Produk Lokal Cimande Bogor</p>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Camilan stik singkong renyah & gurih dari Desa Cimande, Kecamatan Caringin, Bogor. Dibuat dengan cinta, menjaga bumi melalui daur ulang kulit singkong, dan memberdayakan petani lokal.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-gray-200 uppercase tracking-wider mb-4">Halaman Menu</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-yellow-400 transition">Beranda</a></li>
+            <li><a href="menu.html" class="hover:text-yellow-400 transition">Daftar Menu & Varian</a></li>
+            <li><a href="promo.html" class="hover:text-yellow-400 transition">Promo Spesial</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-yellow-400 transition">Cerita & Misi Cimande</a></li>
+            <li><a href="cara-pesan.html" class="hover:text-yellow-400 transition">Cara Pesan & FAQ</a></li>
+            <li><a href="checkout.html" class="hover:text-yellow-400 transition">Keranjang Belanja</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-gray-200 uppercase tracking-wider mb-4">Pusat Layanan</h4>
+          <p class="text-xs sm:text-sm text-gray-400 mb-2">
+            <i class="fa-solid fa-location-dot text-hb-red mr-2"></i> Desa Cimande, Kec. Caringin, Kab. Bogor, Jawa Barat
+          </p>
+          <p class="text-xs sm:text-sm text-gray-400 mb-5">
+            <i class="fa-solid fa-clock text-emerald-400 mr-2"></i> 08.00 - 21.00 WIB
+          </p>
+          
+          <button onclick="openCustomerServiceChat()" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-4 py-2.5 rounded-xl text-xs transition">
+            <i class="fa-brands fa-whatsapp text-base"></i> Chat Admin WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>&copy; 2026 Stik Singkong "Crunch Your Day!". Hak cipta dilindungi undang-undang.</p>
+        <p class="text-gray-400">Bangga dengan produk singkong lokal Indonesia 🇮🇩</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="fixed bottom-24 right-6 z-50 flex items-center group">
+    <button onclick="openCustomerServiceChat()" class="float-wa-btn w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-3xl shadow-2xl flex items-center justify-center transform hover:scale-110 active:scale-95 transition-all shadow-emerald-500/40" aria-label="Chat WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu-page.js"></script>
+</body>
+</html>

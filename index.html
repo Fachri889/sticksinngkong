@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stik Singkong - Crunch Your Day! | Renyah, Gurih & Nagih Asli Cimande Bogor</title>
+  <meta name="description" content="Stik Singkong renyah kualitas premium dari singkong pilihan Cimande Bogor. Varian Original, Balado, dan Pedas Nampol. Fresh Pre-Order, digoreng dadakan!">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hb: {
+              red: '#D32323',
+              redDark: '#B91C1C',
+              yellow: '#FDB813',
+              yellowDark: '#D97706',
+              cream: '#FFFDF7',
+              charcoal: '#1E1E1E',
+              wa: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#FFFDF7] text-gray-800 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ==============================================================
+       1. TOP INFO BAR (HokBen Delivery & PO Info)
+       ============================================================== -->
+  <div class="bg-gradient-to-r from-hb-red via-red-600 to-hb-redDark text-white text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
+        <span><strong>Fresh Pre-Order (PO):</strong> Digoreng dadakan saat pesanan masuk, jaminan 100% renyah & tidak tengik!</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] font-semibold text-yellow-200">
+        <span><i class="fa-solid fa-truck-fast mr-1"></i> Area COD Bogor & Ekspedisi Seluruh Indonesia</span>
+        <span class="hidden md:inline">|</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-clock mr-1"></i> Jam Buka: 08.00 - 21.00 WIB</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+       2. MAIN NAVBAR (HokBen Style with Logo Emblem & Cart Button)
+       ============================================================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo Emblem -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-hb-red to-red-700 flex items-center justify-center text-white shadow-md shadow-red-500/30 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-bowl-food text-2xl text-yellow-300"></i>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-gray-900 leading-none">
+              STIK<span class="text-hb-red">SINGKONG</span>
+            </div>
+            <div class="text-[10px] font-extrabold uppercase tracking-widest text-hb-yellowDark mt-0.5">
+              Crunch Your Day! • Asli Bogor
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm text-gray-700">
+          <a href="index.html" class="nav-link active hover:text-hb-red py-2">Beranda</a>
+          <a href="menu.html" class="nav-link hover:text-hb-red py-2">Menu & Varian</a>
+          <a href="promo.html" class="nav-link hover:text-hb-red py-2">Promo Spesial</a>
+          <a href="tentang-kami.html" class="nav-link hover:text-hb-red py-2">Cerita Cimande</a>
+          <a href="cara-pesan.html" class="nav-link hover:text-hb-red py-2">Cara Pesan & FAQ</a>
+        </nav>
+
+        <!-- CTA Action Buttons & Cart -->
+        <div class="hidden sm:flex items-center gap-3">
+          <!-- Cart Button -->
+          <a href="checkout.html" class="relative inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-amber-50 text-amber-900 hover:bg-amber-100 border border-amber-200 transition" title="Lihat Keranjang Pesanan">
+            <i class="fa-solid fa-basket-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1.5 -right-1.5 bg-hb-red text-white text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+          </a>
+
+          <!-- Direct WA Button -->
+          <a href="checkout.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-hb-red to-red-600 hover:from-red-600 hover:to-red-700 text-white font-extrabold px-5 py-2.5 rounded-2xl text-sm shadow-md shadow-red-500/25 transition transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Pesan Sekarang</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="checkout.html" class="relative p-2.5 rounded-xl bg-amber-50 text-gray-800">
+            <i class="fa-solid fa-basket-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-hb-red text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-gray-700 hover:text-hb-red hover:bg-gray-100 focus:outline-none" aria-label="Buka Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-6 pt-3 pb-6 shadow-2xl">
+      <div class="flex flex-col space-y-3 font-semibold text-gray-700">
+        <a href="index.html" class="py-2.5 border-b border-gray-100 text-hb-red font-bold">Beranda</a>
+        <a href="menu.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Menu & Varian</a>
+        <a href="promo.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Promo Spesial</a>
+        <a href="tentang-kami.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Cerita Cimande</a>
+        <a href="cara-pesan.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Cara Pesan & FAQ</a>
+        <a href="checkout.html" class="mt-2 text-center bg-hb-red text-white font-bold py-3 rounded-2xl shadow-md">
+          <i class="fa-solid fa-cart-shopping mr-1"></i> Keranjang & Checkout
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================================================
+       3. TOP PROMO BANNER CAROUSEL (HokBen Style Interactive Slider)
+       ============================================================== -->
+  <section class="relative bg-gradient-to-b from-amber-50/60 to-white pt-4 pb-6 sm:py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Carousel Frame -->
+      <div id="promo-carousel" class="relative overflow-hidden rounded-[28px] sm:rounded-[36px] shadow-2xl min-h-[380px] sm:min-h-[440px] lg:min-h-[460px] flex items-center group border-2 sm:border-4 border-amber-300/60">
+        
+        <!-- Slide 1: Beli 10 Gratis 1 -->
+        <div class="carousel-slide absolute inset-0 w-full h-full opacity-100 z-10 flex items-center">
+          <img src="assets/images/banner1.jpg" alt="Promo Beli 10 Gratis 1" class="absolute inset-0 w-full h-full object-cover">
+          <div class="carousel-overlay absolute inset-0"></div>
+
+          <div class="relative z-10 max-w-2xl px-6 sm:px-12 lg:px-16 py-8 text-white">
+            <span class="inline-block bg-yellow-400 text-red-950 font-black text-[11px] sm:text-xs uppercase px-3.5 py-1.5 rounded-full mb-3 tracking-wider shadow">
+              PROMO SPESIAL MAHASISWA & NONGKRONG 🎁
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-black leading-tight drop-shadow-sm tracking-tight">
+              BELI 10 KEMASAN, <br class="hidden sm:inline">GRATIS 1 KEMASAN!
+            </h2>
+            <p class="mt-3 text-red-100 text-xs sm:text-sm sm:text-base leading-relaxed max-w-xl font-medium">
+              Dihitung otomatis di keranjang pesanan. Sangat cocok untuk camilan rapat, oleh-oleh reuni, kumpul keluarga, atau mabar game!
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="checkout.html" class="bg-yellow-400 hover:bg-yellow-300 text-red-950 font-black px-6 sm:px-8 py-3.5 rounded-2xl text-center shadow-lg transition transform hover:scale-105 text-xs sm:text-sm">
+                Ambil Promo Sekarang
+              </a>
+              <button onclick="openResellerChat()" class="bg-black/30 hover:bg-black/40 border border-white/40 text-white font-bold px-5 sm:px-6 py-3.5 rounded-2xl text-center transition text-xs sm:text-sm backdrop-blur-sm">
+                <i class="fa-solid fa-boxes-packing mr-1.5"></i> Tanya Harga Grosir / Reseller
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Trio Crunch 3 Rasa Lengkap -->
+        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 z-0 pointer-events-none flex items-center">
+          <img src="assets/images/banner2.jpg" alt="Promo Trio Crunch 3 Rasa" class="absolute inset-0 w-full h-full object-cover">
+          <div class="carousel-overlay absolute inset-0"></div>
+
+          <div class="relative z-10 max-w-2xl px-6 sm:px-12 lg:px-16 py-8 text-white">
+            <span class="inline-block bg-red-500 text-white font-black text-[11px] sm:text-xs uppercase px-3.5 py-1.5 rounded-full mb-3 tracking-wider shadow">
+              PENAWARAN SPESIAL 3 RASA LENGKAP 🔥
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-black leading-tight drop-shadow-sm tracking-tight">
+              PAKET TRIO CRUNCH <br class="hidden sm:inline">HANYA RP24.000!
+            </h2>
+            <p class="mt-3 text-red-100 text-xs sm:text-sm sm:text-base leading-relaxed max-w-xl font-medium">
+              Cicipi seluruh kelezatan: 1x Original Gurih + 1x Balado Manis Gurih + 1x Pedas Nampol dalam satu paket praktis dan hemat!
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <button onclick="addToCart('paket-trio', 1)" class="bg-yellow-400 hover:bg-yellow-300 text-red-950 font-black px-6 sm:px-8 py-3.5 rounded-2xl text-center shadow-lg transition transform hover:scale-105 text-xs sm:text-sm flex items-center gap-2">
+                <i class="fa-solid fa-cart-plus"></i> Pesan Paket Trio
+              </button>
+              <a href="menu.html" class="bg-black/30 hover:bg-black/40 border border-white/40 text-white font-bold px-5 sm:px-6 py-3.5 rounded-2xl text-center transition text-xs sm:text-sm backdrop-blur-sm">
+                Lihat Semua Menu
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Kemitraan Reseller -->
+        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 z-0 pointer-events-none flex items-center">
+          <img src="assets/images/hero.jpg" alt="Peluang Reseller Cimande" class="absolute inset-0 w-full h-full object-cover">
+          <div class="carousel-overlay absolute inset-0"></div>
+
+          <div class="relative z-10 max-w-2xl px-6 sm:px-12 lg:px-16 py-8 text-white">
+            <span class="inline-block bg-emerald-500 text-white font-black text-[11px] sm:text-xs uppercase px-3.5 py-1.5 rounded-full mb-3 tracking-wider shadow">
+              PELUANG BISNIS RESELLER CIMANDE 🌾
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-black leading-tight drop-shadow-sm tracking-tight">
+              HARGA GROSIR KHUSUS <br class="hidden sm:inline">MULAI RP7.000 / PCS!
+            </h2>
+            <p class="mt-3 text-red-100 text-xs sm:text-sm sm:text-base leading-relaxed max-w-xl font-medium">
+              Peluang usaha sampingan menguntungkan bagi mahasiswa, warung, kafe, dan toko oleh-oleh. Gratis foto HD & video promosi!
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <button onclick="openResellerChat()" class="bg-emerald-500 hover:bg-emerald-400 text-white font-black px-6 sm:px-8 py-3.5 rounded-2xl text-center shadow-lg transition transform hover:scale-105 text-xs sm:text-sm flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi Admin Reseller
+              </button>
+              <a href="promo.html" class="bg-black/30 hover:bg-black/40 border border-white/40 text-white font-bold px-5 sm:px-6 py-3.5 rounded-2xl text-center transition text-xs sm:text-sm backdrop-blur-sm">
+                Syarat Kemitraan
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manual Prev & Next Navigation Arrows -->
+        <button id="carousel-prev" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-hb-red text-white flex items-center justify-center transition-all duration-200 backdrop-blur-md shadow-lg border border-white/20 hover:scale-110 active:scale-95" aria-label="Slide Sebelumnya">
+          <i class="fa-solid fa-chevron-left text-sm sm:text-base"></i>
+        </button>
+        <button id="carousel-next" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-hb-red text-white flex items-center justify-center transition-all duration-200 backdrop-blur-md shadow-lg border border-white/20 hover:scale-110 active:scale-95" aria-label="Slide Selanjutnya">
+          <i class="fa-solid fa-chevron-right text-sm sm:text-base"></i>
+        </button>
+
+        <!-- Dynamic Indicator Dots -->
+        <div id="carousel-dots" class="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+          <!-- Populated by carousel.js -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       4. HERO SECTION (HokBen Japanese Fast-Casual Theme)
+       ============================================================== -->
+  <section class="relative pt-6 pb-16 lg:py-16 overflow-hidden bg-gradient-to-b from-white via-amber-50/20 to-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 bg-red-100 text-hb-red px-4 py-1.5 rounded-full text-xs sm:text-sm font-extrabold mb-5 shadow-xs">
+            <span class="w-2.5 h-2.5 rounded-full bg-hb-red animate-ping"></span>
+            Sensasi Camilan Khas Bogor &bull; 100% Singkong Mentega Asli
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.12]">
+            Kerenyahan Gurih yang Bikin <span class="text-transparent bg-clip-text bg-gradient-to-r from-hb-red to-hb-yellowDark">Crunch Your Day!</span>
+          </h1>
+
+          <p class="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal">
+            Camilan stik singkong premium dari perkebunan Desa Cimande, Bogor. Tekstur empuk di dalam dan renyah garing di luar, bertabur bumbu rempah pilihan yang melimpah.
+          </p>
+
+          <!-- Price & Value Chips -->
+          <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs sm:text-sm text-gray-800 font-bold">
+            <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-gray-200 shadow-xs">
+              <i class="fa-solid fa-tag text-hb-red text-base"></i> Hanya Rp8.000 / pouch 100g
+            </div>
+            <div class="flex items-center gap-2 bg-red-50 text-red-800 px-3.5 py-2 rounded-xl border border-red-200 shadow-xs">
+              <i class="fa-solid fa-gift text-hb-red text-base"></i> Beli 10 Gratis 1 Kemasan
+            </div>
+            <div class="flex items-center gap-2 bg-emerald-50 text-emerald-800 px-3.5 py-2 rounded-xl border border-emerald-200 shadow-xs">
+              <i class="fa-solid fa-shield-heart text-emerald-600 text-base"></i> Bebas Pengawet
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="menu.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-hb-red to-red-600 hover:from-red-600 hover:to-red-700 text-white font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-red-600/30 transition transform hover:-translate-y-0.5 text-base">
+              <i class="fa-solid fa-utensils text-yellow-300 text-lg"></i>
+              <span>Pesan Menu Favorit</span>
+            </a>
+            <a href="promo.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-amber-50 text-gray-800 font-extrabold px-7 py-4 rounded-2xl border border-gray-200 transition text-base shadow-sm">
+              <i class="fa-solid fa-percent text-hb-red"></i>
+              <span>Cek Promo Hari Ini</span>
+            </a>
+          </div>
+
+          <!-- Trust metrics -->
+          <div class="mt-10 pt-6 border-t border-gray-100 flex items-center justify-center lg:justify-start gap-8 text-xs text-gray-500 font-medium">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">✓</div>
+              <span>100% Halal & Higienis</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold">🥔</div>
+              <span>Petani Lokal Cimande</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold">⚡</div>
+              <span>Langsung Direct ke WA</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Image Food Photography -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto w-full max-w-md">
+            
+            <!-- Glow background -->
+            <div class="absolute -top-8 -left-8 w-64 h-64 bg-red-400/20 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-yellow-400/25 rounded-full blur-3xl -z-10"></div>
+
+            <!-- Main Image Frame with HokBen Red Border Accent -->
+            <div class="relative bg-white p-3 rounded-[32px] shadow-2xl border border-red-100">
+              <div class="relative overflow-hidden rounded-[24px] aspect-[4/3] bg-amber-100">
+                <img src="assets/images/hero.jpg" alt="Stik Singkong Goreng Renyah Cimande Bogor" class="w-full h-full object-cover">
+                
+                <!-- Floating Badge in Image -->
+                <div class="absolute top-4 left-4 bg-hb-red text-white text-xs font-black uppercase px-3.5 py-1.5 rounded-full shadow-lg">
+                  CRUNCH YOUR DAY!
+                </div>
+                <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md text-gray-900 text-xs font-extrabold px-3 py-1.5 rounded-xl shadow-md border border-amber-200">
+                  <span class="text-hb-red">Rp8.000</span> / kemasan 100g
+                </div>
+              </div>
+
+              <!-- Quick details bar below photo -->
+              <div class="p-4 bg-amber-50/70 rounded-2xl mt-3 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-bold text-gray-900">3 Pilihan Rasa Juara</div>
+                  <div class="text-[11px] text-gray-500">Original &bull; Balado Manis Gurih &bull; Pedas Nampol</div>
+                </div>
+                <a href="menu.html" class="bg-hb-red hover:bg-red-700 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition">
+                  Lihat Menu
+                </a>
+              </div>
+            </div>
+
+            <!-- Floating Stamp Element -->
+            <div class="absolute -bottom-5 -left-5 bg-white p-3.5 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-black text-lg">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase font-bold text-gray-400">Jaminan Mutu</div>
+                <div class="text-xs font-extrabold text-gray-900">Renyah & Garing Maksimal</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       4. MENU FAVORIT PILIHAN (Top 3 Bestsellers Grid ala HokBen)
+       ============================================================== -->
+  <section class="py-16 sm:py-20 bg-white border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
+        <div>
+          <span class="text-hb-red font-extrabold text-xs uppercase tracking-widest bg-red-50 border border-red-200 px-3.5 py-1 rounded-full">
+            Menu Paling Favorit
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2">3 Varian Rasa Juara</h2>
+          <p class="text-gray-600 text-sm sm:text-base mt-1">Dikemas rapi dalam standing pouch kedap udara 100 gram dengan ziplock.</p>
+        </div>
+        <a href="menu.html" class="inline-flex items-center gap-2 text-hb-red hover:text-red-700 font-extrabold text-sm group">
+          <span>Lihat Semua Menu & Paket Kombo</span>
+          <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+      <!-- 3 Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Product 1: Original Gurih -->
+        <div class="menu-card bg-white rounded-3xl border border-gray-200 p-6 flex flex-col justify-between group">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-amber-50 mb-5">
+              <img src="assets/images/original.jpg" alt="Stik Singkong Original Gurih" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-amber-500 text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow">
+                FAVORIT SANTAI
+              </span>
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white text-[11px] font-bold px-2 py-0.5 rounded-md">
+                100 Gram
+              </span>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs font-bold text-gray-500 mb-1">
+              <span>Varian Reguler</span>
+              <span class="text-emerald-600"><i class="fa-solid fa-leaf mr-1"></i> Tidak Pedas</span>
+            </div>
+            <h3 class="text-2xl font-black text-gray-900 group-hover:text-hb-red transition-colors">Original Gurih</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed">
+              Perpaduan gurih alami bawang putih, ketumbar sangrai, dan garam laut. Menonjolkan manis gurih lembutnya singkong asli Cimande.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-gray-100">
+            <div class="flex items-baseline justify-between mb-4">
+              <span class="text-xs font-medium text-gray-400">Harga Satuan</span>
+              <span class="text-2xl font-black text-hb-red">Rp8.000</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('original', 1)" class="w-full bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-extrabold py-2.5 rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-cart-plus"></i> + Keranjang
+              </button>
+              <button onclick="quickOrderDirect('original')" class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-extrabold py-2.5 rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center justify-center gap-1.5">
+                <i class="fa-brands fa-whatsapp"></i> Pesan WA
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Balado (BEST SELLER) -->
+        <div class="menu-card bg-white rounded-3xl border-2 border-hb-red p-6 flex flex-col justify-between group relative shadow-md">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-hb-red text-white text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider shadow">
+            PALING LARIS 🔥
+          </div>
+
+          <div>
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-orange-50 mb-5">
+              <img src="assets/images/balado.jpg" alt="Stik Singkong Balado Manis Gurih" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-red-600 text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow">
+                BEST SELLER
+              </span>
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white text-[11px] font-bold px-2 py-0.5 rounded-md">
+                100 Gram
+              </span>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs font-bold text-gray-500 mb-1">
+              <span>Varian Reguler</span>
+              <span class="text-red-500"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i> Pedas Sedang</span>
+            </div>
+            <h3 class="text-2xl font-black text-gray-900 group-hover:text-hb-red transition-colors">Balado Manis Gurih</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed">
+              Bumbu balado racikan khas berlimpah dengan harmoni rasa pedas manis dan aroma daun jeruk segar. Sekali comot susah berhenti!
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-gray-100">
+            <div class="flex items-baseline justify-between mb-4">
+              <span class="text-xs font-medium text-gray-400">Harga Satuan</span>
+              <span class="text-2xl font-black text-hb-red">Rp8.000</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('balado', 1)" class="w-full bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-extrabold py-2.5 rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-cart-plus"></i> + Keranjang
+              </button>
+              <button onclick="quickOrderDirect('balado')" class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-extrabold py-2.5 rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center justify-center gap-1.5">
+                <i class="fa-brands fa-whatsapp"></i> Pesan WA
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Pedas Nampol -->
+        <div class="menu-card bg-white rounded-3xl border border-gray-200 p-6 flex flex-col justify-between group">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-red-50 mb-5">
+              <img src="assets/images/pedas.jpg" alt="Stik Singkong Pedas Nampol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-red-700 text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow">
+                EXTRA PEDAS
+              </span>
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white text-[11px] font-bold px-2 py-0.5 rounded-md">
+                100 Gram
+              </span>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs font-bold text-gray-500 mb-1">
+              <span>Varian Reguler</span>
+              <span class="text-red-700 font-extrabold"><i class="fa-solid fa-fire text-red-600"></i> Pedas Nampol</span>
+            </div>
+            <h3 class="text-2xl font-black text-gray-900 group-hover:text-hb-red transition-colors">Pedas Nampol</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed">
+              Dibuat khusus untuk pecinta cabai sejati. Bumbu cabai kering pedas membakar berpadu kegurihan stik singkong yang renyah nendang.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-gray-100">
+            <div class="flex items-baseline justify-between mb-4">
+              <span class="text-xs font-medium text-gray-400">Harga Satuan</span>
+              <span class="text-2xl font-black text-hb-red">Rp8.000</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('pedas', 1)" class="w-full bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-extrabold py-2.5 rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-cart-plus"></i> + Keranjang
+              </button>
+              <button onclick="quickOrderDirect('pedas')" class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-extrabold py-2.5 rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center justify-center gap-1.5">
+                <i class="fa-brands fa-whatsapp"></i> Pesan WA
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================================================
+       6. KEUNGGULAN PRODUK (4 Pilar Standar Kualitas)
+       ============================================================== -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-hb-red font-extrabold text-xs uppercase tracking-widest bg-red-50 border border-red-200 px-3.5 py-1 rounded-full">
+          Standar Kualitas
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2">Kenapa Stik Singkong Kami Berbeda?</h2>
+        <p class="text-gray-600 text-sm sm:text-base mt-2">Bukan sekadar keripik singkong biasa, diolah dengan teknik higienis untuk kerenyahan maksimal.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-amber-50/50 p-6 rounded-3xl border border-amber-200/60 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl mb-4 shadow-sm">
+            <i class="fa-solid fa-cookie-bite"></i>
+          </div>
+          <h3 class="font-extrabold text-lg text-gray-900">Renyah & Empuk</h3>
+          <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            Tekstur renyah di luar tapi empuk di dalam, nyaman dikunyah dan sama sekali tidak bikin sakit gigi.
+          </p>
+        </div>
+
+        <div class="bg-emerald-50/50 p-6 rounded-3xl border border-emerald-200/60 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-xl mb-4 shadow-sm">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="font-extrabold text-lg text-gray-900">Singkong Mentega Pilihan</h3>
+          <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            Dipanen segar langsung dari kebun petani Desa Cimande Bogor dengan tingkat ketuaan dan kematangan sempurna.
+          </p>
+        </div>
+
+        <div class="bg-red-50/50 p-6 rounded-3xl border border-red-200/60 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-hb-red text-white flex items-center justify-center text-xl mb-4 shadow-sm">
+            <i class="fa-solid fa-ban"></i>
+          </div>
+          <h3 class="font-extrabold text-lg text-gray-900">Tanpa Pengawet Kimia</h3>
+          <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            Aman dikonsumsi anak-anak hingga dewasa. Murni dari rempah alami tanpa pewarna sintetis berbahaya.
+          </p>
+        </div>
+
+        <div class="bg-orange-50/50 p-6 rounded-3xl border border-orange-200/60 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-xl mb-4 shadow-sm">
+            <i class="fa-solid fa-pepper-hot"></i>
+          </div>
+          <h3 class="font-extrabold text-lg text-gray-900">Bumbu Tabur Melimpah</h3>
+          <p class="text-gray-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            Setiap batang stik terlapisi bumbu rempah racikan yang meresap sempurna sampai ke gigitan terakhir.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       7. TESTIMONI PELANGGAN
+       ============================================================== -->
+  <section class="py-16 sm:py-20 bg-amber-50/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-hb-red font-extrabold text-xs uppercase tracking-widest bg-red-50 border border-red-200 px-3.5 py-1 rounded-full">
+          Kata Mereka
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2">Komentar Pecinta Stik Singkong</h2>
+        <p class="text-gray-600 text-sm sm:text-base mt-2">Cerita jujur dari pelanggan setia kami.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-700 text-sm italic leading-relaxed">
+              "Keren banget singkongnya empuk tapi tetep garing pas dikunyah, beda sama keripik singkong biasa yang kadang keras di gigi. Varian Balado manis pedesnya nagih parah!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 font-extrabold flex items-center justify-center text-sm">
+              AR
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm">Arya Pratama</h4>
+              <p class="text-xs text-gray-400">Mahasiswa IPB Bogor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-700 text-sm italic leading-relaxed">
+              "Beli 10 pack buat camilan ngerjain skripsi bareng temen kosan, langsung dapet bonus 1 kemasan. Yang varian Original gurihnya alami banget, kerasa bumbunya meresap!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-red-100 text-red-800 font-extrabold flex items-center justify-center text-sm">
+              NS
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm">Nadia Safitri</h4>
+              <p class="text-xs text-gray-400">Karyawan Swasta Bogor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 mb-3 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-700 text-sm italic leading-relaxed">
+              "Senang beli di sini karena tahu ada misi sosial buat bantu petani di Cimande dan kulitnya dibuat pakan ternak. Camilan enak sekaligus berbuat kebaikan!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 font-extrabold flex items-center justify-center text-sm">
+              RH
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm">Rian Hidayat</h4>
+              <p class="text-xs text-gray-400">Pecinta Kuliner Wisata</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       8. FOOTER
+       ============================================================== -->
+  <footer class="bg-gray-900 text-white pt-16 pb-12 border-t-4 border-hb-red">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-hb-red flex items-center justify-center text-white">
+              <i class="fa-solid fa-bowl-food text-lg text-yellow-300"></i>
+            </div>
+            <span class="text-2xl font-black">STIK SINGKONG</span>
+          </div>
+          <p class="text-xs font-black text-yellow-400 uppercase tracking-widest mb-3">Crunch Your Day! • Produk Lokal Cimande Bogor</p>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Camilan stik singkong renyah & gurih dari Desa Cimande, Kecamatan Caringin, Bogor. Dibuat dengan cinta, menjaga bumi melalui daur ulang kulit singkong, dan memberdayakan petani lokal.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-extrabold text-sm text-gray-200 uppercase tracking-wider mb-4">Halaman Menu</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-yellow-400 transition">Beranda</a></li>
+            <li><a href="menu.html" class="hover:text-yellow-400 transition">Daftar Menu & Varian</a></li>
+            <li><a href="promo.html" class="hover:text-yellow-400 transition">Promo Spesial</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-yellow-400 transition">Cerita & Misi Cimande</a></li>
+            <li><a href="cara-pesan.html" class="hover:text-yellow-400 transition">Cara Pesan & FAQ</a></li>
+            <li><a href="checkout.html" class="hover:text-yellow-400 transition">Keranjang Belanja</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Ordering -->
+        <div>
+          <h4 class="font-extrabold text-sm text-gray-200 uppercase tracking-wider mb-4">Pusat Layanan</h4>
+          <p class="text-xs sm:text-sm text-gray-400 mb-2">
+            <i class="fa-solid fa-location-dot text-hb-red mr-2"></i> Desa Cimande, Kec. Caringin, Kab. Bogor, Jawa Barat
+          </p>
+          <p class="text-xs sm:text-sm text-gray-400 mb-2">
+            <i class="fa-solid fa-motorcycle text-yellow-400 mr-2"></i> Titik COD: Kampus IPB Dramaga & Area Kota Bogor
+          </p>
+          <p class="text-xs sm:text-sm text-gray-400 mb-5">
+            <i class="fa-solid fa-clock text-emerald-400 mr-2"></i> 08.00 - 17.00 WIB
+          </p>
+          
+          <button onclick="openCustomerServiceChat()" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-4 py-2.5 rounded-xl text-xs transition">
+            <i class="fa-brands fa-whatsapp text-base"></i> Chat Admin WhatsApp
+          </button>
+        </div>
+
+      </div>
+
+      <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>&copy; 2026 Stik Singkong "Crunch Your Day!". Hak cipta dilindungi undang-undang.</p>
+        <p class="text-gray-400">Bangga dengan produk singkong lokal Indonesia 🇮🇩</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================================
+       9. FLOATING WHATSAPP BUTTON (POJOK KANAN BAWAH)
+       ============================================================== -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <span class="hidden sm:inline-block mr-3 px-3.5 py-2 bg-gray-900/90 text-white text-xs font-bold rounded-xl shadow-xl backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+      Order Cepat via WhatsApp
+    </span>
+    <button onclick="openCustomerServiceChat()" class="float-wa-btn w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-3xl shadow-2xl flex items-center justify-center transform hover:scale-110 active:scale-95 transition-all shadow-emerald-500/40" aria-label="Chat WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/carousel.js"></script>
+</body>
+</html>

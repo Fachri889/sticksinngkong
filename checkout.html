@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang Pesanan & Checkout WhatsApp | Stik Singkong "Crunch Your Day!"</title>
+  <meta name="description" content="Kalkulator pesanan otomatis dan form checkout langsung ke WhatsApp untuk Stik Singkong renyah kualitas premium Cimande Bogor.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hb: {
+              red: '#D32323',
+              redDark: '#B91C1C',
+              yellow: '#FDB813',
+              yellowDark: '#D97706',
+              cream: '#FFFDF7',
+              charcoal: '#1E1E1E',
+              wa: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#FFFDF7] text-gray-800 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- TOP INFO BAR -->
+  <div class="bg-gradient-to-r from-hb-red via-red-600 to-hb-redDark text-white text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
+        <span><strong>Kalkulator Pesanan Otomatis:</strong> Beli 10 kemasan langsung gratis 1 kemasan otomatis terhitung!</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] font-semibold text-yellow-200">
+        <span><i class="fa-solid fa-lock mr-1"></i> Langsung Direct ke WhatsApp Tanpa Database</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-hb-red to-red-700 flex items-center justify-center text-white shadow-md shadow-red-500/30 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-bowl-food text-2xl text-yellow-300"></i>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-gray-900 leading-none">
+              STIK<span class="text-hb-red">SINGKONG</span>
+            </div>
+            <div class="text-[10px] font-extrabold uppercase tracking-widest text-hb-yellowDark mt-0.5">
+              Crunch Your Day! • Asli Bogor
+            </div>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm text-gray-700">
+          <a href="index.html" class="nav-link hover:text-hb-red py-2">Beranda</a>
+          <a href="menu.html" class="nav-link hover:text-hb-red py-2">Menu & Varian</a>
+          <a href="promo.html" class="nav-link hover:text-hb-red py-2">Promo Spesial</a>
+          <a href="tentang-kami.html" class="nav-link hover:text-hb-red py-2">Cerita Cimande</a>
+          <a href="cara-pesan.html" class="nav-link hover:text-hb-red py-2">Cara Pesan & FAQ</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="menu.html" class="inline-flex items-center gap-2 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 font-bold px-4 py-2.5 rounded-2xl text-sm transition">
+            <i class="fa-solid fa-plus"></i> Tambah Menu Lain
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2 lg:hidden">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-gray-700 hover:text-hb-red hover:bg-gray-100 focus:outline-none" aria-label="Buka Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-6 pt-3 pb-6 shadow-2xl">
+      <div class="flex flex-col space-y-3 font-semibold text-gray-700">
+        <a href="index.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Beranda</a>
+        <a href="menu.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Menu & Varian</a>
+        <a href="promo.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Promo Spesial</a>
+        <a href="tentang-kami.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Cerita Cimande</a>
+        <a href="cara-pesan.html" class="py-2.5 border-b border-gray-100 hover:text-hb-red">Cara Pesan & FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB & TITLE -->
+  <section class="pt-8 pb-6 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <nav class="flex items-center gap-2 text-xs text-gray-400 font-medium mb-3">
+        <a href="index.html" class="hover:text-hb-red">Beranda</a>
+        <span>/</span>
+        <a href="menu.html" class="hover:text-hb-red">Menu</a>
+        <span>/</span>
+        <span class="text-gray-900 font-bold">Keranjang & Checkout</span>
+      </nav>
+
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <span class="text-hb-red font-extrabold text-xs uppercase tracking-widest bg-red-50 border border-red-200 px-3.5 py-1 rounded-full">
+            Kalkulator & Form Pemesanan
+          </span>
+          <h1 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2">Keranjang Pesanan Anda</h1>
+        </div>
+
+        <button onclick="clearCart()" class="text-xs font-bold text-gray-400 hover:text-red-600 transition flex items-center gap-1.5 self-start md:self-auto">
+          <i class="fa-solid fa-trash-can"></i> Kosongkan Keranjang
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN CHECKOUT CONTENT -->
+  <section class="py-10 sm:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- EMPTY STATE -->
+      <div id="checkout-empty-state" class="hidden text-center py-20 bg-white rounded-3xl border border-gray-200 p-8 shadow-sm max-w-2xl mx-auto">
+        <div class="w-20 h-20 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center text-3xl mx-auto mb-4">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+        <h2 class="text-2xl font-black text-gray-900">Keranjang Belanja Masih Kosong</h2>
+        <p class="text-gray-500 text-sm mt-2 max-w-md mx-auto leading-relaxed">
+          Pilih varian rasa stik singkong favoritmu terlebih dahulu untuk mulai membuat pesanan.
+        </p>
+
+        <!-- Quick sample buttons -->
+        <div class="mt-6 flex flex-wrap justify-center gap-2">
+          <button onclick="addToCart('original', 2)" class="bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold px-3 py-2 rounded-xl transition">
+            + 2x Original Gurih
+          </button>
+          <button onclick="addToCart('balado', 3)" class="bg-orange-100 hover:bg-orange-200 text-orange-900 text-xs font-bold px-3 py-2 rounded-xl transition">
+            + 3x Balado Manis
+          </button>
+          <button onclick="addToCart('pedas', 2)" class="bg-red-100 hover:bg-red-200 text-red-900 text-xs font-bold px-3 py-2 rounded-xl transition">
+            + 2x Pedas Nampol
+          </button>
+        </div>
+
+        <div class="mt-8">
+          <a href="menu.html" class="inline-flex items-center gap-2 bg-hb-red hover:bg-red-700 text-white font-extrabold px-8 py-3.5 rounded-2xl text-sm shadow-md transition">
+            <i class="fa-solid fa-utensils"></i> Buka Katalog Menu
+          </a>
+        </div>
+      </div>
+
+      <!-- ACTIVE CHECKOUT AREA -->
+      <div id="checkout-content-area" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left Column: Items List & Customer Form -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <!-- Box 1: Items in Cart -->
+          <div class="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-sm">
+            <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
+              <h2 class="font-black text-lg text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-list-check text-hb-red"></i> 1. Rincian Menu Pesanan
+              </h2>
+              <a href="menu.html" class="text-xs font-extrabold text-hb-red hover:underline">
+                + Tambah Varian Lain
+              </a>
+            </div>
+
+            <!-- List rendered by checkout-page.js -->
+            <div id="checkout-items-list" class="space-y-3">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <!-- Quick Add Shortcuts inside checkout -->
+            <div class="mt-6 pt-4 border-t border-gray-100">
+              <span class="text-xs text-gray-400 font-bold uppercase tracking-wider block mb-2">Tambah Cepat:</span>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" onclick="addToCart('original', 1)" class="text-xs bg-amber-50 hover:bg-amber-100 border border-amber-200 text-amber-900 font-bold px-3 py-1.5 rounded-xl transition">
+                  +1 Original (Rp8k)
+                </button>
+                <button type="button" onclick="addToCart('balado', 1)" class="text-xs bg-orange-50 hover:bg-orange-100 border border-orange-200 text-orange-900 font-bold px-3 py-1.5 rounded-xl transition">
+                  +1 Balado (Rp8k)
+                </button>
+                <button type="button" onclick="addToCart('pedas', 1)" class="text-xs bg-red-50 hover:bg-red-100 border border-red-200 text-red-900 font-bold px-3 py-1.5 rounded-xl transition">
+                  +1 Pedas (Rp8k)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box 2: Customer Identity Form -->
+          <div class="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-sm">
+            <h2 class="font-black text-lg text-gray-900 flex items-center gap-2 mb-4 pb-3 border-b border-gray-100">
+              <i class="fa-solid fa-user-pen text-hb-red"></i> 2. Data Pemesan & Pengiriman
+            </h2>
+
+            <form id="checkout-form" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="cust-name" class="block text-xs font-bold text-gray-700 mb-1">
+                    Nama Lengkap <span class="text-red-500">*</span>
+                  </label>
+                  <input type="text" id="cust-name" required placeholder="Contoh: Kak Dinda / Mas Budi" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hb-red text-sm text-gray-800 transition">
+                </div>
+
+                <div>
+                  <label for="cust-phone" class="block text-xs font-bold text-gray-700 mb-1">
+                    Nomor WhatsApp Anda (Opsional)
+                  </label>
+                  <input type="tel" id="cust-phone" placeholder="Contoh: 08123456789" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hb-red text-sm text-gray-800 transition">
+                </div>
+              </div>
+
+              <div>
+                <label for="cust-delivery" class="block text-xs font-bold text-gray-700 mb-1">
+                  Metode Pengiriman / Titik Temu
+                </label>
+                <select id="cust-delivery" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hb-red text-sm text-gray-800 transition bg-white">
+                  <option value="COD Area Kampus IPB Dramaga">COD Area Kampus IPB Dramaga (Gratis Ongkir)</option>
+                  <option value="COD Stasiun Bogor / Titik Temu Kota">COD Stasiun Bogor / Titik Temu Kota</option>
+                  <option value="Kurir Instan / Sameday (Grab/Gojek Bogor)">Kurir Instan / Sameday (Grab/Gojek Bogor)</option>
+                  <option value="Kirim Ekspedisi Luar Kota (JNE / J&T / Sicepat)">Kirim Ekspedisi Luar Kota (JNE / J&T / Sicepat)</option>
+                  <option value="Ambil Langsung ke Rumah Produksi Cimande">Ambil Langsung ke Rumah Produksi Desa Cimande</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="cust-address" class="block text-xs font-bold text-gray-700 mb-1">
+                  Alamat Pengiriman / Patokan Titik COD <span class="text-red-500">*</span>
+                </label>
+                <textarea id="cust-address" required rows="2" placeholder="Contoh: Asrama Mahasiswa IPB Sylvaplat / Kos Melati No. 12 Bogor Barat" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hb-red text-sm text-gray-800 transition"></textarea>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="cust-payment" class="block text-xs font-bold text-gray-700 mb-1">
+                    Rencana Metode Pembayaran
+                  </label>
+                  <select id="cust-payment" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hb-red text-sm text-gray-800 transition bg-white">
+                    <option value="Transfer Bank BCA">Transfer Bank BCA</option>
+                    <option value="Transfer Bank Mandiri / BRI / BSI">Transfer Bank Mandiri / BRI / BSI</option>
+                    <option value="QRIS (Gopay/OVO/Dana/ShopeePay)">Scan QRIS (Gopay/OVO/Dana/ShopeePay)</option>
+                    <option value="Bayar di Tempat (COD)">Bayar di Tempat (COD Titik Temu)</option>
+                  </select>
+                </div>
+
+                <!-- Bonus Flavor Choice (Shown when bonus > 0) -->
+                <div id="bonus-flavor-wrapper" class="hidden">
+                  <label for="cust-bonus-flavor" class="block text-xs font-bold text-hb-red mb-1">
+                    🎁 Pilihan Rasa Pouch Gratis Anda
+                  </label>
+                  <select id="cust-bonus-flavor" class="w-full px-4 py-3 rounded-2xl border-2 border-red-300 bg-red-50 focus:outline-none focus:ring-2 focus:ring-hb-red text-sm text-gray-800 transition font-bold">
+                    <option value="Balado Manis Gurih (Favorit)">Bonus: Balado Manis Gurih (Favorit)</option>
+                    <option value="Original Gurih">Bonus: Original Gurih</option>
+                    <option value="Pedas Nampol">Bonus: Pedas Nampol</option>
+                    <option value="Bebas Dipilihkan Admin">Bonus: Bebas Dipilihkan Admin</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="cust-notes" class="block text-xs font-bold text-gray-700 mb-1">
+                  Catatan Tambahan (Opsional)
+                </label>
+                <input type="text" id="cust-notes" placeholder="Contoh: Mau dikirim besok sore / minta ekstra renyah" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hb-red text-sm text-gray-800 transition">
+              </div>
+
+              <!-- Validation Error Box -->
+              <div id="checkout-error" class="hidden p-3.5 rounded-2xl bg-red-100 border border-red-200 text-red-700 text-xs font-bold text-center"></div>
+
+              <!-- Submit button inside form -->
+              <div class="pt-2">
+                <button type="submit" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-black text-base sm:text-lg flex items-center justify-center gap-3 shadow-lg shadow-emerald-500/30 transition transform hover:-translate-y-0.5 active:scale-98">
+                  <i class="fa-brands fa-whatsapp text-2xl"></i>
+                  <span>Kirim Pesanan via WhatsApp</span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Live Order Summary Sticky Card -->
+        <div class="lg:col-span-5 sticky top-28">
+          
+          <div class="bg-gradient-to-b from-white to-amber-50/50 rounded-3xl border-2 border-hb-red p-6 sm:p-8 shadow-xl">
+            <span class="inline-block bg-hb-red text-white text-[10px] font-black uppercase px-3 py-1 rounded-full mb-3 tracking-wider">
+              RINGKASAN PEMESANAN
+            </span>
+            <h3 class="text-2xl font-black text-gray-900">Total Biaya Pesanan</h3>
+
+            <!-- Details -->
+            <div class="mt-6 space-y-3.5 text-sm">
+              <div class="flex items-center justify-between text-gray-600">
+                <span>Total Kemasan:</span>
+                <span class="font-extrabold text-gray-900"><span id="summary-total-qty">0</span> pcs</span>
+              </div>
+
+              <!-- Bonus Box -->
+              <div id="summary-bonus-box" class="hidden p-3.5 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-between text-hb-red font-bold text-xs">
+                <span class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-gift"></i> Promo Beli 10 Gratis 1:
+                </span>
+                <span class="bg-hb-red text-white px-2 py-0.5 rounded-md font-black">+ <span id="summary-bonus-qty">0</span> Pcs FREE!</span>
+              </div>
+
+              <div class="flex items-center justify-between text-gray-600">
+                <span>Estimasi Ongkir:</span>
+                <span class="text-emerald-600 font-bold">Dikonfirmasi Admin</span>
+              </div>
+
+              <div class="pt-4 border-t border-gray-200 flex items-baseline justify-between">
+                <div>
+                  <span class="text-xs text-gray-400 block font-medium">Total Harga Produk:</span>
+                  <span id="summary-total-price" class="text-3xl font-black text-hb-red">Rp0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="mt-6 p-4 rounded-2xl bg-white border border-gray-100 text-xs text-gray-600 space-y-2">
+              <div class="flex items-center gap-2 font-bold text-gray-900">
+                <i class="fa-solid fa-shield-halved text-emerald-600"></i>
+                <span>Transaksi Aman & Transparan</span>
+              </div>
+              <p class="leading-relaxed text-gray-500">
+                Setelah klik tombol pesan, aplikasi WhatsApp Anda akan terbuka dengan rincian pesanan yang terformat rapi. Anda tidak perlu mengetik ulang!
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white pt-16 pb-12 border-t-4 border-hb-red">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-hb-red flex items-center justify-center text-white">
+              <i class="fa-solid fa-bowl-food text-lg text-yellow-300"></i>
+            </div>
+            <span class="text-2xl font-black">STIK SINGKONG</span>
+          </div>
+          <p class="text-xs font-black text-yellow-400 uppercase tracking-widest mb-3">Crunch Your Day! • Produk Lokal Cimande Bogor</p>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Camilan stik singkong renyah & gurih dari Desa Cimande, Kecamatan Caringin, Bogor. Dibuat dengan cinta, menjaga bumi melalui daur ulang kulit singkong, dan memberdayakan petani lokal.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-gray-200 uppercase tracking-wider mb-4">Halaman Menu</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-yellow-400 transition">Beranda</a></li>
+            <li><a href="menu.html" class="hover:text-yellow-400 transition">Daftar Menu & Varian</a></li>
+            <li><a href="promo.html" class="hover:text-yellow-400 transition">Promo Spesial</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-yellow-400 transition">Cerita & Misi Cimande</a></li>
+            <li><a href="cara-pesan.html" class="hover:text-yellow-400 transition">Cara Pesan & FAQ</a></li>
+            <li><a href="checkout.html" class="hover:text-yellow-400 transition">Keranjang Belanja</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-gray-200 uppercase tracking-wider mb-4">Pusat Layanan</h4>
+          <p class="text-xs sm:text-sm text-gray-400 mb-2">
+            <i class="fa-solid fa-location-dot text-hb-red mr-2"></i> Desa Cimande, Kec. Caringin, Kab. Bogor, Jawa Barat
+          </p>
+          <p class="text-xs sm:text-sm text-gray-400 mb-5">
+            <i class="fa-solid fa-clock text-emerald-400 mr-2"></i> 08.00 - 21.00 WIB
+          </p>
+          
+          <button onclick="openCustomerServiceChat()" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-4 py-2.5 rounded-xl text-xs transition">
+            <i class="fa-brands fa-whatsapp text-base"></i> Chat Admin WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>&copy; 2026 Stik Singkong "Crunch Your Day!". Hak cipta dilindungi undang-undang.</p>
+        <p class="text-gray-400">Bangga dengan produk singkong lokal Indonesia 🇮🇩</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/checkout-page.js"></script>
+</body>
+</html>
