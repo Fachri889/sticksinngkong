@@ -51,56 +51,62 @@ const PRODUCTS = [
   },
   {
     id: "paket-trio",
-    name: "Paket Trio Crunch (3 Rasa)",
-    shortName: "Paket Trio (3 Pouch)",
+    name: "Paket Trio Crunch",
+    shortName: "Paket Trio (3 Pack)",
+    kicker: "Paket Icip Lengkap",
     category: "paket-hemat",
-    price: 24000,
-    weight: "3 x 100g",
-    image: "assets/images/hero.jpg",
-    badge: "HEMAT 3 RASA",
+    price: 22000,
+    weight: "3 Pack",
+    image: "assets/images/balado.jpg",
+    badge: "PAKET ICIP LENGKAP",
     badgeColor: "bg-emerald-600",
     spiciness: 2,
-    description: "Nikmati komplit seluruh sensasi rasa! Berisi 1x Original Gurih, 1x Balado Manis Gurih, dan 1x Pedas Nampol. Solusi pas untuk icip-icip semua varian bersama teman.",
-    features: ["Dapat 3 Pouch Lengkap", "Cocok untuk Icip-icip", "Kemasan Ziplock", "Hemat & Praktis"],
-    isPopular: false,
+    description: "Lebih Banyak, Lebih Hemat, Makin seru buat ngemil bareng!",
+    features: ["1 Pack Original Gurih", "1 Pack Balado Gurih", "1 Pack Pedas Nampol"],
+    isPopular: true,
     bundleItems: { original: 1, balado: 1, pedas: 1 }
   },
   {
     id: "paket-party-10",
-    name: "Paket Party 10 Pcs (Bonus 1 Gratis)",
-    shortName: "Paket 10 + Bonus 1",
+    name: "Paket Borong Hemat",
+    shortName: "Paket Borong Hemat (5 Pack)",
+    kicker: "Kamis Penglaris",
     category: "paket-hemat",
-    price: 80000,
-    weight: "11 x 100g (Total 1.1kg)",
+    price: 35000,
+    weight: "5 Pack",
     image: "assets/images/hero.jpg",
-    badge: "BELI 10 GRATIS 1 🎁",
+    badge: "BEST VALUE 🎁",
     badgeColor: "bg-red-600",
     spiciness: 2,
-    description: "Pilihan terbaik untuk konsumsi kumpul bareng, nonton bola, rapat organisasi kampus, atau oleh-oleh! Beli 10 kemasan, otomatis dapat GRATIS 1 kemasan tambahan (Bebas pilih rasa).",
-    features: ["Total 11 Kemasan", "Hemat Rp8.000", "Bebas Mix Varian", "Freshly Fried PO"],
+    description: "Beli 5 Pack cuma Rp35.000 Harga normal Rp40.000 Hemat Rp5.000!",
+    features: ["Hemat Rp8.000 Langsung", "Bebas Mix Varian Rasa", "Otomatis Dihitung di Checkout"],
     isPopular: true,
-    bundleItems: { original: 4, balado: 4, pedas: 2 }
+    bundleItems: { original: 2, balado: 2, pedas: 1 }
   },
   {
     id: "paket-reseller-25",
-    name: "Paket Kemitraan Reseller (25 Pouch)",
-    shortName: "Paket Reseller 25 Pcs",
-    category: "reseller",
-    price: 175000,
-    weight: "25 x 100g",
+    name: "Ambil 2 Bayar Rp15.000!",
+    shortName: "Paket Borong Berdua (2 Pack)",
+    kicker: "Paket Borong Berdua",
+    category: "paket-hemat",
+    price: 15000,
+    weight: "2 Pack",
     image: "assets/images/original.jpg",
-    badge: "HARGA GROSIR",
-    badgeColor: "bg-blue-600",
+    badge: "PAKET BORONG BERDUA",
+    badgeColor: "bg-amber-500",
     spiciness: 1,
-    description: "Peluang usaha sampingan menguntungkan bagi mahasiswa, warung, kafe, dan toko oleh-oleh. Dapatkan harga khusus mitra Rp7.000/kemasan dengan margin profit menarik.",
-    features: ["Harga Rp7.000/pcs", "Support Foto Promosi", "Bebas Mix Rasa", "Konsultasi Penjualan"],
+    description: "Lebih Hemat, Lebih Seru Buat Ngemil! 😋",
+    features: ["Crunch Your Day!", "2 PACK CUMA"],
     isPopular: false,
-    bundleItems: { original: 10, balado: 10, pedas: 5 }
+    bundleItems: { original: 1, balado: 1 }
   }
 ];
 
 // Helper get product by ID
 function getProductById(id) {
+  if (id === 'paket-borong-berdua') {
+    return PRODUCTS.find(p => p.id === 'paket-reseller-25');
+  }
   return PRODUCTS.find(p => p.id === id);
 }
 
