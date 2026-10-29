@@ -51,7 +51,7 @@ function renderMenuGrid(category = 'all') {
           <div class="p-6">
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="text-xs font-bold uppercase tracking-wider text-amber-600">
-                ${p.category === 'ala-carte' ? 'Varian Reguler' : p.category === 'paket-hemat' ? 'Paket Kombo' : 'Kemitraan'}
+                ${p.kicker || (p.category === 'ala-carte' ? 'Varian Reguler' : p.category === 'paket-hemat' ? 'Paket Kombo' : 'Kemitraan')}
               </span>
               <div>${renderSpiciness(p.spiciness)}</div>
             </div>
