@@ -5,7 +5,7 @@
 
 // Konfigurasi Nomor WhatsApp Merchant (Ganti sesuai nomor admin Anda)
 // Format: 628xxxx (tanpa tanda + atau spasi)
-const WA_PHONE_NUMBER = "6281234567890";
+const WA_PHONE_NUMBER = "6289515718529";
 
 /**
  * Format angka ke mata uang Rupiah
